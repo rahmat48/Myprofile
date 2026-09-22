@@ -1,0 +1,407 @@
+================================================================================
+TODOLIST — WEBSITE PORTOFOLIO RAHMAT DWI NURCAHYO
+================================================================================
+Folder Project : D:\CODING\Porto_Rahmat
+Folder Aset    : D:\CODING\ASSET
+Metode         : Opsi 1 — Copy aset ke dalam folder proyek
+Tanggal        : 2025
+================================================================================
+
+CATATAN PENTING:
+- Fokus utama portofolio: IoT & Database
+- Tema warna: Cream/beige + coklat (light), coklat gelap + gold (dark)
+- Font: Press Start 2P (judul) + Inter (body)
+- Gaya: Modern, simpel, tidak kotak-kotak
+- Efek dinamis: fade-in scroll, hover card, typing effect, parallax
+- TANPA bintang jatuh
+- Bahasa: Bilingual (ID/EN) dengan toggle
+- Dark mode toggle dengan localStorage
+- Loading screen dengan animasi pixel
+
+================================================================================
+FASE 0: PERSIAPAN ASET (WAJIB DULU)
+================================================================================
+[x] Buat folder D:\CODING\Porto_Rahmat\assets\
+[x] Copy semua file dari D:\CODING\ASSET ke D:\CODING\Porto_Rahmat\assets\
+[x] Rename file (hapus spasi) sesuai daftar berikut:
+
+    DARI                                    KE
+    ----                                    ----
+    Profile Picture.JPG                     profile.jpg
+    Proyek Airdisenflex.jpg                 airdisenflex.jpg
+    Smart Agriculture.png                   smart-agriculture.png
+    Foto Kegiatan Asistensi.jpg             asistensi.jpg
+    Kerja Di Shopee.jpg                     shopee.jpg
+    Logo Youtube.png                        youtube.png
+    Hobi Lari.png                           hobi-lari.png
+    Hobi.png                                hobi.png
+    Website Wunut.png                       website-wunut.png
+    Juara 1 AMCC.001.png                    sertifikat-amcc.png
+    SERTIFIKAT DATABASE.png                 sertifikat-database.png
+    SERTIFIKAT HARDWARE SOFTWARE.png        sertifikat-hardware.png
+    SERTIFIKAT MIKROKONTROLLER.png          sertifikat-mikrokontroler.png
+    Surat Keterangan Magang Amikom.png      surat-magang.png
+
+[x] Verifikasi struktur folder akhir:
+    D:\CODING\Porto_Rahmat\
+    ├── index.html
+    ├── style.css
+    ├── script.js
+    ├── TODOLIST.txt
+    └── assets\
+        ├── profile.jpg
+        ├── airdisenflex.jpg
+        ├── smart-agriculture.png
+        ├── asistensi.jpg
+        ├── shopee.jpg
+        ├── youtube.png
+        ├── hobi-lari.png
+        ├── website-wunut.png
+        ├── sertifikat-amcc.png
+        ├── sertifikat-database.png
+        ├── sertifikat-hardware.png
+        ├── sertifikat-mikrokontroler.png
+        └── surat-magang.png
+
+================================================================================
+FASE 1: FILE DASAR
+================================================================================
+[x] Buat file index.html
+[x] Buat file style.css
+[x] Buat file script.js
+[x] Buat file README.md (opsional)
+
+================================================================================
+FASE 2: KONFIGURASI AWAL (index.html)
+================================================================================
+[x] Struktur HTML5 dasar: <!DOCTYPE html>, <html>, <head>, <body>
+[x] Set <html lang="id" data-theme="light">
+[x] Meta viewport & meta description
+[x] Import Google Fonts:
+    - Press Start 2P (untuk judul)
+    - Inter (untuk body)
+[x] Import Font Awesome 6.5 via CDN
+[x] Link ke style.css
+
+================================================================================
+FASE 3: LOADING SCREEN
+================================================================================
+[x] <div id="loader"> dengan animasi pixel kotak berputar
+[x] Teks "LOADING..." pakai font Press Start 2P
+[x] Styling loader di style.css
+[x] Script: hide loader setelah window load (fade out 0.6s)
+
+================================================================================
+FASE 4: NAVBAR
+================================================================================
+[x] Logo "RAHMAT.DEV" font Press Start 2P
+[x] Menu navigasi: Beranda, Pengalaman, Proyek, Skill, Sertifikat, Kontak
+[x] Tombol toggle bahasa (ID/EN) — icon language
+[x] Tombol toggle dark/light mode — icon moon/sun
+[x] Hamburger menu untuk mobile (<768px)
+[x] Smooth scroll ke setiap section
+[x] Navbar effect saat scroll: background blur + shadow + padding mengecil
+[x] Menu bilingual: pakai atribut data-id & data-en
+
+================================================================================
+FASE 5: SECTION HERO
+================================================================================
+[x] Foto profil (assets/profile.jpg) dengan frame modern (rounded, shadow)
+[x] Greeting: "Halo, saya" / "Hi, I'm"
+[x] Nama besar: RAHMAT DWI NURCAHYO (font Press Start 2P)
+[x] Typing effect untuk role bergantian:
+    - IoT Developer
+    - Database Enthusiast
+    - Laravel Developer
+    - Lab Assistant
+[x] Deskripsi singkat: fokus IoT & Database, IPK 3,89/4,00
+[x] Tombol CTA: "Lihat Proyek" + "Hubungi Saya"
+[x] Scroll indicator (chevron down animasi bounce)
+[x] Background gradient radial + parallax effect
+[x] Container max-width 1200px
+
+================================================================================
+FASE 6: SECTION ABOUT
+================================================================================
+[x] Judul "Tentang Saya" / "About Me"
+[x] Paragraf summary (versi Indonesia, tanpa YouTube):
+    "Saya Rahmat Dwi Nurcahyo, lulusan S1 Informatika Universitas Amikom
+     Yogyakarta dengan IPK 3,89/4,00. Fokus utama saya adalah Internet of
+     Things (IoT) dan Database Systems. Saya pernah menjadi Asisten
+     Laboratorium Database & Mikrokontroler selama 4 tahun, mengembangkan
+     produk IoT Airdisenflex di PT. Culturo Bio, serta membangun website
+     desa berbasis Laravel."
+[x] Info list dengan icon:
+    - Location: Klaten, Jawa Tengah
+    - Graduation: Universitas Amikom Yogyakarta
+    - Star: IPK 3,89 / 4,00
+[x] 4 stat card:
+    - 4+ Tahun Asisten Lab
+    - 3+ Proyek IoT
+    - 3.89 IPK
+    - 1st Juara AMCC 2021
+[x] Animasi fade-in saat scroll (class .reveal)
+
+================================================================================
+FASE 7: SECTION EXPERIENCE (TIMELINE)
+================================================================================
+[x] Timeline vertikal dengan dot di setiap item
+[x] Item 1: 2020–2024 — Asisten Laboratorium Database & Mikrokontroler
+    - Universitas Amikom Yogyakarta
+    - Deskripsi: Membimbing praktikum database (SQL Server) dan
+      mikrokontroler/IoT. Menyusun modul pembelajaran.
+    - Badge: "4 Years • 100+ Students"
+[x] Item 2: 2022 — Intern IoT Product Development
+    - PT. Bio Culturo
+    - Deskripsi: Mengembangkan produk IoT Airdisenflex: desain sistem,
+      perakitan prototipe, pengujian, siap dipasarkan.
+    - Badge: "IoT Product"
+[x] Item 3: 2025 — Live Chat Buyer & Logistics Support
+    - Shopee Indonesia
+    - Deskripsi: Menangani pertanyaan buyer via live chat terkait
+      pengiriman, paket hilang, koordinasi kurir.
+[x] Item 4: 2025–Present — Content Creator
+    - BS Review (YouTube)
+    - Deskripsi: Mengelola channel YouTube: riset konten, penulisan
+      naskah, editing video, desain thumbnail, analisis performa.
+[x] Animasi fade-in saat scroll
+
+================================================================================
+FASE 8: SECTION PROJECTS (GRID)
+================================================================================
+[x] Grid 2 kolom (desktop), 1 kolom (mobile)
+[x] Project 1: Airdisenflex — IoT Product
+    - Gambar: assets/airdisenflex.jpg
+    - Badge: "IoT"
+[x] Project 2: Smart Agriculture IoT
+    - Gambar: assets/smart-agriculture.png
+    - Badge: "IoT"
+[x] Project 3: Website Desa Wunut, Klaten
+    - Gambar: assets/website-wunut.png
+    - Badge: "Web"
+[x] Project 4: Asisten Lab Database & Mikrokontroler
+    - Gambar: assets/asistensi.jpg
+    - Badge: "Database"
+[x] Hover effect: zoom gambar (scale 1.05) + shadow naik + translateY(-8px)
+[x] Setiap card: gambar, judul, deskripsi, badge kategori
+
+================================================================================
+FASE 9: SECTION SKILLS
+================================================================================
+[x] Grid 2x2 (desktop), 1 kolom (mobile)
+[x] Kotak 1 — Database (icon fa-database):
+    - Microsoft SQL Server
+    - MySQL
+    - Database Design
+    - Query Optimization
+[x] Kotak 2 — IoT & Hardware (icon fa-microchip):
+    - Microcontroller (Arduino, ESP32)
+    - Sensor Integration
+    - Prototype Development
+    - Internet of Things
+[x] Kotak 3 — Web Development (icon fa-code):
+    - Laravel Framework
+    - HTML, CSS, JavaScript
+    - REST API
+[x] Kotak 4 — Multimedia (icon fa-video):
+    - Photoshop, CorelDraw
+    - Premiere Pro, Capcut
+    - Scriptwriting & Storyboarding
+    - AI-assisted Content Tools
+
+================================================================================
+FASE 10: SECTION HOBI
+================================================================================
+[x] Layout 2 kolom: gambar di kiri, teks di kanan
+[x] Gambar: assets/hobi-lari.png
+[x] Judul "Lari" / "Running"
+[x] Deskripsi:
+    "Lari membantu saya menjaga fokus, stamina, dan konsistensi —
+     baik di dunia kerja maupun pengembangan diri."
+
+================================================================================
+FASE 11: SECTION SERTIFIKAT (CAROUSEL)
+================================================================================
+[x] Carousel horizontal dengan tombol prev/next
+[x] Auto-slide setiap 4 detik (opsional)
+[x] Item 1: assets/sertifikat-amcc.png — Juara 1 AMCC 2021
+[x] Item 2: assets/sertifikat-database.png — Sertifikat Database
+[x] Item 3: assets/sertifikat-hardware.png — Sertifikat Hardware Software
+[x] Item 4: assets/sertifikat-mikrokontroler.png — Sertifikat Mikrokontroler
+[x] Item 5: assets/surat-magang.png — Surat Keterangan Magang
+[x] Klik gambar → buka lightbox (perbesar fullscreen)
+[x] Tombol close (X) + klik overlay + ESC untuk tutup
+[x] Carousel ukuran kecil, tidak fullscreen
+
+================================================================================
+FASE 12: SECTION CONTACT
+================================================================================
+[x] Grid 3 kolom (desktop), 2 kolom (tablet), 1 kolom (mobile)
+[x] Card GitHub: https://github.com/rahmat48 (icon fa-github)
+[x] Card Email: rahmatdw48@gmail.com (icon fa-envelope, mailto:)
+[x] Card WhatsApp: https://wa.me/6281214277964 (icon fa-whatsapp)
+[x] Card Instagram: @rahmatdw48 (icon fa-instagram, link ke IG)
+[x] Card Domisili: Klaten, Jawa Tengah (icon fa-location-dot)
+[x] Card YouTube: BS Review (icon fa-youtube)
+[x] Hover effect: background berubah + icon warna accent + shadow
+
+================================================================================
+FASE 13: FOOTER
+================================================================================
+[x] Copyright © 2025 Rahmat Dwi Nurcahyo
+[x] Teks "Dibuat dengan ❤️ di Klaten" (bilingual)
+[x] Background lebih gelap dari section sebelumnya
+
+================================================================================
+FASE 14: LIGHTBOX SERTIFIKAT
+================================================================================
+[x] Modal overlay fullscreen (background hitam 90%)
+[x] Gambar sertifikat tampil center, max 90% viewport
+[x] Tombol close (X) di pojok kanan atas
+[x] Klik area overlay untuk tutup
+[x] Tekan ESC untuk tutup
+[x] Animasi fade-in + scale saat terbuka
+
+================================================================================
+FASE 15: STYLING (style.css)
+================================================================================
+[x] CSS Variables:
+    Light mode:
+      --bg: #F5EFE6
+      --bg-alt: #E8DCC8
+      --card: #FDFBF7
+      --text: #4A2C1A
+      --text-soft: #6B4423
+      --accent: #A67B5B
+      --gold: #D4A574
+      --border: #D9C9B0
+    Dark mode:
+      --bg: #1A1410
+      --bg-alt: #241B15
+      --card: #2A201A
+      --text: #F5EFE6
+      --text-soft: #D4C4B0
+      --accent: #D4A574
+      --gold: #E8C088
+      --border: #3D2E22
+[x] Reset: * { margin: 0; padding: 0; box-sizing: border-box; }
+[x] html { scroll-behavior: smooth; }
+[x] Body: font Inter, line-height 1.7
+[x] Font Press Start 2P untuk: .nav-logo, .hero-name, .section-title, .loader
+[x] Container: max-width 1200px, margin auto, padding 0 24px
+[x] Section: padding 100px 0
+[x] Section-alt: background var(--bg-alt)
+[x] Section title: font Press Start 2P, ukuran 24-32px, margin-bottom 60px
+[x] Responsive:
+    - Mobile <768px: grid jadi 1 kolom, font size lebih kecil, hamburger aktif
+    - Tablet 768–1024px: grid 2 kolom
+    - Desktop >1024px: grid full
+[x] Animasi:
+    - Fade-in scroll (.reveal)
+    - Hover card (transform, box-shadow)
+    - Typing cursor blink (@keyframes blink)
+    - Parallax hero
+    - Loader pixel spin
+    - Scroll indicator bounce
+[x] Dark mode styling (semua element)
+[x] Transisi halus 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+
+================================================================================
+FASE 16: JAVASCRIPT (script.js)
+================================================================================
+[x] Hide loader setelah window load (class .hidden)
+[x] Typing effect untuk role di hero (array of strings, loop)
+[x] Navbar scroll effect: tambah class .scrolled saat scrollY > 50
+[x] Hamburger menu toggle: toggle class .active pada navMenu
+[x] Tutup hamburger saat klik link
+[x] Smooth scroll untuk nav link
+[x] Intersection Observer untuk .reveal (fade-in saat masuk viewport)
+[x] Dark mode toggle:
+    - Toggle data-theme di <html>
+    - Simpan preferensi ke localStorage
+    - Ganti icon moon/sun
+[x] Language toggle:
+    - Toggle ID/EN
+    - Ganti semua elemen dengan data-id & data-en
+    - Simpan preferensi ke localStorage
+    - Update label ID/EN di tombol
+[x] Carousel sertifikat:
+    - Tombol prev/next
+    - Auto-slide (setInterval)
+    - Pause saat hover
+[x] Lightbox sertifikat:
+    - Klik item carousel → tampilkan gambar fullscreen
+    - Tombol close, klik overlay, ESC untuk tutup
+    - Prevent body scroll saat lightbox terbuka
+[x] Verifikasi console tidak ada error
+
+================================================================================
+FASE 17: TESTING LOKAL
+================================================================================
+[x] Buka index.html di browser (atau pakai Live Server extension)
+[x] Cek semua gambar muncul (profile, projects, sertifikat, hobi)
+[x] Cek semua link berfungsi (GitHub, Email, WA, IG, YouTube)
+[x] Cek responsive:
+    - F12 → Toggle Device Toolbar
+    - Test di ukuran 375px (iPhone), 768px (tablet), 1440px (desktop)
+[x] Cek dark mode toggle (klik icon moon/sun)
+[x] Cek language toggle (klik icon language)
+[x] Cek typing effect di hero
+[x] Cek carousel sertifikat (prev/next)
+[x] Cek lightbox (klik gambar sertifikat)
+[x] Cek smooth scroll (klik menu nav)
+[x] Cek hamburger menu di mobile
+[x] Buka Console (F12) → pastikan tidak ada error merah
+
+================================================================================
+FASE 18: PUSH KE GITHUB
+================================================================================
+[ ] Buat repo baru di GitHub: portofolio-rahmat (public)
+[ ] Buka terminal di D:\CODING\Porto_Rahmat
+[ ] git init
+[ ] git add .
+[ ] git commit -m "Initial commit: portofolio website"
+[ ] git branch -M main
+[ ] git remote add origin https://github.com/rahmat48/portofolio-rahmat.git
+[ ] git push -u origin main
+
+================================================================================
+FASE 19: DEPLOY GITHUB PAGES
+================================================================================
+[ ] Buka repo di GitHub
+[ ] Settings → Pages (sidebar kiri)
+[ ] Source: Deploy from a branch
+[ ] Branch: main → Folder: / (root)
+[ ] Klik Save
+[ ] Tunggu 1–2 menit (refresh halaman)
+[ ] Akses: https://rahmat48.github.io/portofolio-rahmat/
+[ ] Test semua fitur di URL live
+
+================================================================================
+FASE 20: FINAL CHECK
+================================================================================
+[ ] Website live dan bisa diakses publik
+[ ] Semua gambar muncul di hosting
+[ ] Semua link berfungsi
+[ ] Responsive di HP (test buka di HP langsung)
+[ ] Dark mode berfungsi
+[ ] Language toggle berfungsi
+[ ] Loading cepat (< 3 detik)
+[ ] Share link ke teman/rekruter/LinkedIn
+
+================================================================================
+URUTAN PENGERJAAN YANG DISARANKAN
+================================================================================
+1. Fase 0      (copy & rename aset)         — 10 menit
+2. Fase 1–5    (HTML dasar + hero)          — 30 menit
+3. Fase 6–13   (section lainnya)            — 1 jam
+4. Fase 15     (CSS lengkap)                — 1 jam
+5. Fase 16     (JS interaktif)              — 1 jam
+6. Fase 17     (testing)                    — 30 menit
+7. Fase 18–20  (deploy)                     — 15 menit
+
+Total estimasi: 4–5 jam (santai)
+
+================================================================================
+AKHIR TODOLIST
+================================================================================

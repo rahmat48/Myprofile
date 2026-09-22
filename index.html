@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio Rahmat Dwi Nurcahyo - AI Enthusiast, IoT &amp; Database Specialist, Web Developer, dan Konten Kreator.">
+  <title>Rahmat Dwi Nurcahyo | AI Enthusiast, IoT &amp; Database Specialist</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Animated Ambient Waves Background -->
+  <div class="bg-waves" aria-hidden="true">
+    <div class="wave-blob wave-blob-1"></div>
+    <div class="wave-blob wave-blob-2"></div>
+    <div class="wave-blob wave-blob-3"></div>
+    <div class="wave-blob wave-blob-4"></div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgressBar" class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader-wrapper" aria-hidden="true">
+    <div class="pixel-spinner"></div>
+    <p class="loader-text">LOADING...</p>
+  </div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">MYPORTOFOLIO</a>
+      
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link" data-id="Beranda" data-en="Home">Beranda</a>
+        <a href="#about" class="nav-link" data-id="Tentang" data-en="About">Tentang</a>
+        <a href="#experience" class="nav-link" data-id="Pengalaman" data-en="Experience">Pengalaman</a>
+        <a href="#projects" class="nav-link" data-id="Proyek" data-en="Projects">Proyek</a>
+        <a href="#skills" class="nav-link" data-id="Skill" data-en="Skills">Skill</a>
+        <a href="#hobby" class="nav-link" data-id="Hobi" data-en="Hobby">Hobi</a>
+        <a href="#certificates" class="nav-link" data-id="Sertifikat" data-en="Certificates">Sertifikat</a>
+        <a href="#contact" class="nav-link" data-id="Kontak" data-en="Contact">Kontak</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Language Toggle -->
+        <button id="langToggle" class="icon-btn" aria-label="Toggle language" title="Ganti Bahasa">
+          <i class="fa-solid fa-language"></i>
+          <span id="langLabel" class="btn-badge">ID</span>
+        </button>
+
+        <!-- Dark/Light Theme Toggle -->
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Ganti Tema">
+          <i id="themeIcon" class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="hamburger" class="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-shapes" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-avatar-wrap">
+          <div class="hero-avatar-ring">
+            <img src="assets/profile.jpg" alt="Foto Rahmat Dwi Nurcahyo" class="hero-avatar" loading="eager">
+          </div>
+        </div>
+
+        <div class="hero-text">
+          <p class="hero-greeting" data-id="Halo, saya" data-en="Hi, I'm">Halo, saya</p>
+          <h1 class="hero-name">RAHMAT DWI NURCAHYO</h1>
+          
+          <div class="hero-roles">
+            <span class="role-prefix">&gt;</span>
+            <span id="typedText" class="typed-text"></span>
+            <span class="typed-cursor" aria-hidden="true">|</span>
+          </div>
+
+          <p class="hero-desc" 
+             data-id="AI Enthusiast yang aktif mengeksplorasi kecerdasan buatan untuk kebutuhan konten kreator dan proyek website. Lulusan S1 Informatika Universitas Amikom Yogyakarta (IPK 3,89/4,00) berfokus pada IoT, Database Systems, dan Web Development."
+             data-en="AI Enthusiast actively experimenting with artificial intelligence for content creation workflows and web development. Graduate of S1 Informatika, Universitas Amikom Yogyakarta (GPA 3.89/4.00) with core focus on IoT, Database Systems, and Web Development.">
+            AI Enthusiast yang aktif mengeksplorasi kecerdasan buatan untuk kebutuhan konten kreator dan proyek website. Lulusan S1 Informatika Universitas Amikom Yogyakarta (IPK 3,89/4,00) berfokus pada IoT, Database Systems, dan Web Development.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary" data-id="Lihat Proyek" data-en="View Projects">
+              <i class="fa-solid fa-briefcase"></i> <span>Lihat Proyek</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary" data-id="Hubungi Saya" data-en="Contact Me">
+              <i class="fa-solid fa-paper-plane"></i> <span>Hubungi Saya</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll ke Tentang">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal" data-id="TENTANG SAYA" data-en="ABOUT ME">TENTANG SAYA</h2>
+        <div class="about-grid">
+          <div class="about-text-card">
+            <p class="about-summary"
+               data-id="Saya Rahmat Dwi Nurcahyo, seorang AI Enthusiast yang aktif mengeksplorasi kecerdasan buatan untuk kebutuhan Content Creator dan pengembangan website. Lulusan S1 Informatika Universitas Amikom Yogyakarta dengan IPK 3,89/4,00, dengan fokus teknis kuat pada Internet of Things (IoT) dan Database Systems. Berpengalaman sebagai Asisten Laboratorium Database &amp; Mikrokontroler selama 4 tahun, mengembangkan produk IoT Airdisenflex di PT. Culturo Bio, serta membangun website desa berbasis Laravel."
+               data-en="I am Rahmat Dwi Nurcahyo, an active AI Enthusiast experimenting with artificial intelligence for content creation workflows and web development. Graduate of S1 Informatika, Universitas Amikom Yogyakarta with a 3.89/4.00 GPA, holding strong technical roots in Internet of Things (IoT) and Database Systems. Experienced as a Database &amp; Microcontroller Lab Assistant for 4 years, developed the Airdisenflex IoT product at PT. Culturo Bio, and built village web platforms with Laravel.">
+              Saya Rahmat Dwi Nurcahyo, seorang AI Enthusiast yang aktif mengeksplorasi kecerdasan buatan untuk kebutuhan Content Creator dan pengembangan website. Lulusan S1 Informatika Universitas Amikom Yogyakarta dengan IPK 3,89/4,00, dengan fokus teknis kuat pada Internet of Things (IoT) dan Database Systems. Berpengalaman sebagai Asisten Laboratorium Database &amp; Mikrokontroler selama 4 tahun, mengembangkan produk IoT Airdisenflex di PT. Culturo Bio, serta membangun website desa berbasis Laravel.
+            </p>
+
+            <ul class="about-highlights">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span data-id="Lokasi: Klaten, Jawa Tengah, Indonesia" data-en="Location: Klaten, Central Java, Indonesia">Lokasi: Klaten, Jawa Tengah, Indonesia</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span data-id="Alumni: Universitas Amikom Yogyakarta (S1 Informatika)" data-en="Alumni: Universitas Amikom Yogyakarta (S1 Informatika)">Alumni: Universitas Amikom Yogyakarta (S1 Informatika)</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-award"></i>
+                <span data-id="Akademik: IPK 3,89 / 4,00" data-en="Academics: GPA 3.89 / 4.00">Akademik: IPK 3,89 / 4,00</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card delay-1">
+              <span class="stat-number">4+</span>
+              <span class="stat-label" data-id="Tahun Asisten Lab" data-en="Years Lab Assistant">Tahun Asisten Lab</span>
+            </div>
+            <div class="stat-card delay-2">
+              <span class="stat-number">3+</span>
+              <span class="stat-label" data-id="Proyek IoT" data-en="IoT Projects">Proyek IoT</span>
+            </div>
+            <div class="stat-card delay-3">
+              <span class="stat-number">3.89</span>
+              <span class="stat-label" data-id="Indeks Prestasi Kumulatif" data-en="Cumulative GPA">Indeks Prestasi Kumulatif</span>
+            </div>
+            <div class="stat-card delay-4">
+              <span class="stat-number">1st</span>
+              <span class="stat-label" data-id="Juara AMCC 2021" data-en="AMCC 2021 Winner">Juara AMCC 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title reveal" data-id="PENGALAMAN" data-en="EXPERIENCE">PENGALAMAN</h2>
+        
+        <div class="timeline">
+          <!-- Item 1 -->
+          <div class="timeline-item delay-1">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-year">2020 – 2024</span>
+                  <h3 class="timeline-role" data-id="Asisten Laboratorium Database & Mikrokontroler" data-en="Database & Microcontroller Lab Assistant">Asisten Laboratorium Database & Mikrokontroler</h3>
+                  <p class="timeline-org">Universitas Amikom Yogyakarta</p>
+                </div>
+                <span class="badge" data-id="4 Tahun • 100+ Mahasiswa" data-en="4 Years • 100+ Students">4 Tahun • 100+ Mahasiswa</span>
+              </div>
+              <p class="timeline-desc" 
+                 data-id="Membimbing praktikum basis data (SQL Server, MySQL) dan pemrograman mikrokontroler/IoT (Arduino, sensor, aktuator). Menyusun materi ajar, modul praktikum, dan evaluasi hasil belajar ratusan mahasiswa."
+                 data-en="Mentored database practicum (SQL Server, MySQL) and microcontroller/IoT programming (Arduino, sensors, actuators). Developed learning modules, practical syllabi, and evaluated learning achievements for hundreds of students.">
+                Membimbing praktikum basis data (SQL Server, MySQL) dan pemrograman mikrokontroler/IoT (Arduino, sensor, aktuator). Menyusun materi ajar, modul praktikum, dan evaluasi hasil belajar ratusan mahasiswa.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item delay-2">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-year">2022</span>
+                  <h3 class="timeline-role" data-id="Intern IoT Product Development" data-en="Intern IoT Product Development">Intern IoT Product Development</h3>
+                  <p class="timeline-org">PT. Culturo Bio</p>
+                </div>
+                <span class="badge" data-id="Produk IoT" data-en="IoT Product">Produk IoT</span>
+              </div>
+              <p class="timeline-desc"
+                 data-id="Mengembangkan produk IoT Airdisenflex: perancangan arsitektur hardware & firmware, pengujian sensor sterilisasi udara, perakitan prototipe presisi, dan uji kelayakan produksi siap edar."
+                 data-en="Developed the Airdisenflex IoT product: hardware & firmware architecture design, air sterilization sensor validation, precision prototype assembly, and production readiness testing.">
+                Mengembangkan produk IoT Airdisenflex: perancangan arsitektur hardware & firmware, pengujian sensor sterilisasi udara, perakitan prototipe presisi, dan uji kelayakan produksi siap edar.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item delay-3">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-year">2025</span>
+                  <h3 class="timeline-role" data-id="Live Chat Buyer & Logistics Support" data-en="Live Chat Buyer & Logistics Support">Live Chat Buyer & Logistics Support</h3>
+                  <p class="timeline-org">Shopee Indonesia</p>
+                </div>
+                <span class="badge" data-id="Layanan & Operasional" data-en="Support & Ops">Layanan & Operasional</span>
+              </div>
+              <p class="timeline-desc"
+                 data-id="Menangani penanganan pertanyaan dan keluhan pembeli secara realtime melalui live chat, memproses eskalasi logistik/paket tertunda, serta berkoordinasi langsung dengan pihak ekspedisi untuk penyelesaian cepat."
+                 data-en="Handled buyer inquiries and complaints in real-time via live chat, coordinated logistics/delayed parcels escalation, and liaised with delivery partners for swift resolution.">
+                Menangani penanganan pertanyaan dan keluhan pembeli secara realtime melalui live chat, memproses eskalasi logistik/paket tertunda, serta berkoordinasi langsung dengan pihak ekspedisi untuk penyelesaian cepat.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="timeline-item delay-4">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-year">2025 – Present</span>
+                  <h3 class="timeline-role" data-id="Content Creator & Video Producer" data-en="Content Creator & Video Producer">Content Creator & Video Producer</h3>
+                  <p class="timeline-org"><a href="https://www.youtube.com/@BS_REVIEW48" target="_blank" rel="noopener noreferrer">BS Review (YouTube) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i></a></p>
+                </div>
+                <span class="badge" data-id="Media Digital" data-en="Digital Media">Media Digital</span>
+              </div>
+              <p class="timeline-desc"
+                 data-id="Mengelola channel YouTube secara menyeluruh dengan memanfaatkan tools AI untuk riset tren gadget/teknologi, penulisan naskah (storyboarding), produksi &amp; editing video (Premiere Pro, CapCut), desain grafis, dan analitik performa audiens."
+                 data-en="Managed YouTube channel end-to-end utilizing AI tools for tech trend research, scriptwriting (storyboarding), video production &amp; editing (Premiere Pro, CapCut), graphic design, and audience analytics.">
+                Mengelola channel YouTube secara menyeluruh dengan memanfaatkan tools AI untuk riset tren gadget/teknologi, penulisan naskah (storyboarding), produksi &amp; editing video (Premiere Pro, CapCut), desain grafis, dan analitik performa audiens.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal" data-id="PROYEK UNGGULAN" data-en="FEATURED PROJECTS">PROYEK UNGGULAN</h2>
+        <p class="section-subtitle reveal" 
+           data-id="Geser untuk melihat proyek &amp; klik kartu gambar untuk melihat ukuran penuh"
+           data-en="Slide to explore projects &amp; click any card image to view fullscreen">
+          Geser untuk melihat proyek &amp; klik kartu gambar untuk melihat ukuran penuh
+        </p>
+        
+        <!-- Projects Carousel -->
+        <div class="carousel-container" id="projectCarousel">
+          <button class="carousel-btn prev-btn" id="prevProj" aria-label="Proyek sebelumnya" data-id="Sebelumnya" data-en="Previous">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track" id="projectTrack">
+              <!-- Project 1 -->
+              <article class="project-card" data-src="assets/airdisenflex.jpg">
+                <div class="project-img-wrapper" title="Klik untuk memperbesar">
+                  <img src="assets/airdisenflex.jpg" alt="Proyek Airdisenflex IoT" class="project-img" loading="lazy">
+                  <div class="project-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                  <span class="project-badge">IoT</span>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title" data-id="Airdisenflex — IoT Sanitizer Device" data-en="Airdisenflex — IoT Sanitizer Device">Airdisenflex — IoT Sanitizer Device</h3>
+                  <p class="project-desc"
+                     data-id="Perangkat sanitasi udara dan permukaan otomatis terintegrasi mikrokontroler dan sensor pintar untuk pencegahan kontaminasi udara pada lingkungan klinis dan publik."
+                     data-en="Automated air and surface sanitation hardware integrated with microcontrollers and smart sensors for contamination prevention in clinical and public spaces.">
+                    Perangkat sanitasi udara dan permukaan otomatis terintegrasi mikrokontroler dan sensor pintar untuk pencegahan kontaminasi udara pada lingkungan klinis dan publik.
+                  </p>
+                  <div class="project-tags">
+                    <span>ESP32</span>
+                    <span data-id="Integrasi Sensor" data-en="Sensor Integration">Integrasi Sensor</span>
+                    <span>Firmware C++</span>
+                    <span data-id="Prototipe Hardware" data-en="Hardware Prototype">Prototipe Hardware</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 2 -->
+              <article class="project-card" data-src="assets/smart-agriculture.png">
+                <div class="project-img-wrapper" title="Klik untuk memperbesar">
+                  <img src="assets/smart-agriculture.png" alt="Proyek Smart Agriculture" class="project-img" loading="lazy">
+                  <div class="project-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                  <span class="project-badge">IoT</span>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title" data-id="Smart Agriculture IoT System" data-en="Smart Agriculture IoT System">Smart Agriculture IoT System</h3>
+                  <p class="project-desc"
+                     data-id="Sistem monitoring dan otomatisasi penyiraman pertanian presisi berbasis sensor kelembaban tanah, suhu, dan aktuator relay dengan pelaporan data jarak jauh."
+                     data-en="Precision agriculture monitoring and automated irrigation system leveraging soil moisture & temperature sensors with remote telemetry data.">
+                    Sistem monitoring dan otomatisasi penyiraman pertanian presisi berbasis sensor kelembaban tanah, suhu, dan aktuator relay dengan pelaporan data jarak jauh.
+                  </p>
+                  <div class="project-tags">
+                    <span>Arduino</span>
+                    <span data-id="Sensor Tanah" data-en="Soil Sensor">Sensor Tanah</span>
+                    <span data-id="Aktuator Relay" data-en="Relay Actuator">Aktuator Relay</span>
+                    <span>Telemetry</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 3 -->
+              <article class="project-card" data-src="assets/website-wunut.png">
+                <div class="project-img-wrapper" title="Klik untuk memperbesar">
+                  <img src="assets/website-wunut.png" alt="Website Desa Wunut" class="project-img" loading="lazy">
+                  <div class="project-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                  <span class="project-badge">Web</span>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title" data-id="Website Desa Wunut, Klaten" data-en="Website Desa Wunut, Klaten">Website Desa Wunut, Klaten</h3>
+                  <p class="project-desc"
+                     data-id="Portal informasi desa dan layanan administrasi digital masyarakat berbasis web dengan CMS dinamis, responsif di semua perangkat dan ramah pengguna."
+                     data-en="Village information portal and digital administrative public service web platform featuring dynamic CMS, fully responsive and accessible.">
+                    Portal informasi desa dan layanan administrasi digital masyarakat berbasis web dengan CMS dinamis, responsif di semua perangkat dan ramah pengguna.
+                  </p>
+                  <div class="project-tags">
+                    <span>Laravel</span>
+                    <span>MySQL</span>
+                    <span>Bootstrap</span>
+                    <span>REST API</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 4 -->
+              <article class="project-card" data-src="assets/asistensi.jpg">
+                <div class="project-img-wrapper" title="Klik untuk memperbesar">
+                  <img src="assets/asistensi.jpg" alt="Asistensi Lab Praktikum" class="project-img" loading="lazy">
+                  <div class="project-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                  <span class="project-badge">Database &amp; Hardware</span>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title" data-id="Mentorship Praktikum Database &amp; Mikrokontroler" data-en="Database &amp; Hardware Practicum Mentorship">Mentorship Praktikum Database &amp; Mikrokontroler</h3>
+                  <p class="project-desc"
+                     data-id="Dokumentasi dan sistem modul pembelajaran praktikum untuk ratusan mahasiswa dalam penguasaan skema basis data relasional serta interfacing mikrokontroler."
+                     data-en="Learning module ecosystem and practicum mentorship guiding hundreds of undergraduates in mastering relational database schemas and microcontroller interfacing.">
+                    Dokumentasi dan sistem modul pembelajaran praktikum untuk ratusan mahasiswa dalam penguasaan skema basis data relasional serta interfacing mikrokontroler.
+                  </p>
+                  <div class="project-tags">
+                    <span>SQL Server</span>
+                    <span data-id="Desain Basis Data" data-en="Database Normalization">Desain Basis Data</span>
+                    <span>Microcontroller</span>
+                    <span data-id="Mentorship" data-en="Mentorship">Mentorship</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <button class="carousel-btn next-btn" id="nextProj" aria-label="Proyek selanjutnya" data-id="Selanjutnya" data-en="Next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="carousel-indicators" id="projectDots"></div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title reveal" data-id="KEAHLIAN" data-en="SKILLS & EXPERTISE">KEAHLIAN</h2>
+
+        <div class="skills-grid">
+          <!-- Skill Box 1 -->
+          <div class="skill-card delay-1">
+            <div class="skill-header">
+              <div class="skill-icon-wrap">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h3 class="skill-group-title" data-id="Database Systems" data-en="Database Systems">Database Systems</h3>
+            </div>
+            <ul class="skill-list">
+              <li><i class="fa-solid fa-check"></i> Microsoft SQL Server</li>
+              <li><i class="fa-solid fa-check"></i> MySQL</li>
+              <li><i class="fa-solid fa-check"></i> Relational Database Design (ERD & Normalization)</li>
+              <li><i class="fa-solid fa-check"></i> Complex Query Optimization & Stored Procedures</li>
+            </ul>
+          </div>
+
+          <!-- Skill Box 2 -->
+          <div class="skill-card delay-2">
+            <div class="skill-header">
+              <div class="skill-icon-wrap">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <h3 class="skill-group-title" data-id="IoT & Hardware" data-en="IoT & Hardware">IoT & Hardware</h3>
+            </div>
+            <ul class="skill-list">
+              <li><i class="fa-solid fa-check"></i> Microcontrollers (ESP32, ESP8266, Arduino)</li>
+              <li><i class="fa-solid fa-check"></i> Sensor & Actuator Integration</li>
+              <li><i class="fa-solid fa-check"></i> Hardware Prototyping & Soldering</li>
+              <li><i class="fa-solid fa-check"></i> IoT Protocols & Telemetry</li>
+            </ul>
+          </div>
+
+          <!-- Skill Box 3 -->
+          <div class="skill-card delay-3">
+            <div class="skill-header">
+              <div class="skill-icon-wrap">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="skill-group-title" data-id="Web Development" data-en="Web Development">Web Development</h3>
+            </div>
+            <ul class="skill-list">
+              <li><i class="fa-solid fa-check"></i> Laravel Framework (PHP)</li>
+              <li><i class="fa-solid fa-check"></i> Modern HTML5, CSS3, Vanilla JS</li>
+              <li><i class="fa-solid fa-check"></i> RESTful API Design & Integration</li>
+              <li><i class="fa-solid fa-check"></i> <span data-id="AI Website Builder Tools" data-en="AI Website Builder Tools">AI Website Builder Tools</span></li>
+            </ul>
+          </div>
+
+          <!-- Skill Box 4 -->
+          <div class="skill-card delay-4">
+            <div class="skill-header">
+              <div class="skill-icon-wrap">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <h3 class="skill-group-title" data-id="AI &amp; Multimedia Content" data-en="AI &amp; Multimedia Content">AI &amp; Multimedia Content</h3>
+            </div>
+            <ul class="skill-list">
+              <li><i class="fa-solid fa-check"></i> <span data-id="Eksperimen Generative AI untuk Konten &amp; Web" data-en="Generative AI for Content &amp; Web Projects">Eksperimen Generative AI untuk Konten &amp; Web</span></li>
+              <li><i class="fa-solid fa-check"></i> <span data-id="Prompt Engineering &amp; AI Workflow" data-en="Prompt Engineering &amp; AI Workflows">Prompt Engineering &amp; AI Workflow</span></li>
+              <li><i class="fa-solid fa-check"></i> Adobe Premiere Pro, CapCut &amp; Photoshop</li>
+              <li><i class="fa-solid fa-check"></i> <span data-id="Scriptwriting &amp; Storyboarding Berbasis AI" data-en="AI-Assisted Scriptwriting &amp; Storyboarding">Scriptwriting &amp; Storyboarding Berbasis AI</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobby Section -->
+    <section id="hobby" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal" data-id="HOBI &amp; MINAT" data-en="HOBBY &amp; PASSION">HOBI &amp; MINAT</h2>
+        <p class="section-subtitle reveal" 
+           data-id="Aktivitas dan eksplorasi di luar rutinitas yang menjaga energi kreatif, stamina, dan rasa ingin tahu tetap menyala"
+           data-en="Activities and explorations beyond routines that keep creative energy, stamina, and curiosity alive">
+          Aktivitas dan eksplorasi di luar rutinitas yang menjaga energi kreatif, stamina, dan rasa ingin tahu tetap menyala
+        </p>
+
+        <!-- Hobby Carousel -->
+        <div class="carousel-container" id="hobbyCarousel">
+          <button class="carousel-btn prev-btn" id="prevHobby" aria-label="Hobi sebelumnya" data-id="Sebelumnya" data-en="Previous">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track" id="hobbyTrack">
+              <!-- Slide 1: Running -->
+              <div class="hobby-slide">
+                <div class="hobby-wrapper">
+                  <div class="hobby-img-container">
+                    <img src="assets/hobi.png" alt="Aktivitas Lari Rahmat" class="hobby-standalone-img" loading="lazy">
+                  </div>
+                  <div class="hobby-card">
+                    <div class="hobby-badge">
+                      <i class="fa-solid fa-person-running"></i>
+                      <span data-id="Olahraga &amp; Gaya Hidup" data-en="Sport &amp; Lifestyle">Olahraga &amp; Gaya Hidup</span>
+                    </div>
+                    <h3 class="hobby-title" data-id="Lari (Running)" data-en="Running">Lari (Running)</h3>
+                    <p class="hobby-quote"
+                       data-id="&ldquo;Lari membantu saya menjaga fokus, stamina, dan konsistensi — baik di dunia kerja maupun pengembangan diri.&rdquo;"
+                       data-en="&ldquo;Running helps me maintain razor focus, stamina, and consistency — both in professional work and continuous self-development.&rdquo;">
+                      &ldquo;Lari membantu saya menjaga fokus, stamina, dan konsistensi — baik di dunia kerja maupun pengembangan diri.&rdquo;
+                    </p>
+                    <p class="hobby-desc"
+                       data-id="Bagi saya, setiap kilometer adalah latihan kedisiplinan dan ketahanan mental. Ritme lari mengajarkan bagaimana memecah target besar menjadi langkah-langkah konsisten yang terukur."
+                       data-en="To me, every kilometer is a practice in discipline and mental resilience. The rhythm of running teaches how to break down ambitious goals into consistent, measurable steps.">
+                      Bagi saya, setiap kilometer adalah latihan kedisiplinan dan ketahanan mental. Ritme lari mengajarkan bagaimana memecah target besar menjadi langkah-langkah konsisten yang terukur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2: Tech, AI & Automation Exploration -->
+              <div class="hobby-slide">
+                <div class="hobby-wrapper">
+                  <div class="hobby-img-container hobby-tech-container">
+                    <div class="hobby-tech-visual">
+                      <i class="fa-solid fa-microchip tech-main-icon"></i>
+                      <div class="tech-icon-pills">
+                        <span><i class="fa-solid fa-brain"></i> AI</span>
+                        <span><i class="fa-solid fa-wifi"></i> IoT</span>
+                        <span><i class="fa-solid fa-gears"></i> Auto</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hobby-card">
+                    <div class="hobby-badge">
+                      <i class="fa-solid fa-wand-magic-sparkles"></i>
+                      <span data-id="Eksplorasi Teknologi &amp; Otomasi" data-en="Tech Exploration &amp; Automation">Eksplorasi Teknologi &amp; Otomasi</span>
+                    </div>
+                    <h3 class="hobby-title" data-id="Eksperimen AI, IoT &amp; Otomasi" data-en="AI, IoT &amp; Automation Experiments">Eksperimen AI, IoT &amp; Otomasi</h3>
+                    <p class="hobby-quote"
+                       data-id="&ldquo;Rasa ingin tahu adalah bahan bakar inovasi — mengawinkan kecerdasan buatan dengan dunia fisik IoT untuk mengotomasi hal rumit menjadi sederhana.&rdquo;"
+                       data-en="&ldquo;Curiosity fuels true innovation — merging artificial intelligence with the physical world of IoT to transform complexity into effortless automation.&rdquo;">
+                      &ldquo;Rasa ingin tahu adalah bahan bakar inovasi — mengawinkan kecerdasan buatan dengan dunia fisik IoT untuk mengotomasi hal rumit menjadi sederhana.&rdquo;
+                    </p>
+                    <p class="hobby-desc"
+                       data-id="Waktu luang bagi saya adalah laboratorium terbuka. Dari menguji model AI terbaru, mengotak-atik mikrokontroler &amp; sensor pintar, hingga merancang workflow otomasi yang efisien. Selalu ada kepuasan magis ketika barisan kode mampu menggerakkan perangkat fisik dan menyelesaikan masalah nyata."
+                       data-en="Spare time for me is an open laboratory. From testing bleeding-edge AI models, tinkering with microcontrollers &amp; sensors, to architecting streamlined automation workflows. There is an unmistakable magic when code breathes life into physical hardware to solve real-world problems.">
+                      Waktu luang bagi saya adalah laboratorium terbuka. Dari menguji model AI terbaru, mengotak-atik mikrokontroler &amp; sensor pintar, hingga merancang workflow otomasi yang efisien. Selalu ada kepuasan magis ketika barisan kode mampu menggerakkan perangkat fisik dan menyelesaikan masalah nyata.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-btn next-btn" id="nextHobby" aria-label="Hobi selanjutnya" data-id="Selanjutnya" data-en="Next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="carousel-indicators" id="hobbyDots"></div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section">
+      <div class="container">
+        <h2 class="section-title reveal" data-id="SERTIFIKAT" data-en="CERTIFICATES">SERTIFIKAT</h2>
+        <p class="section-subtitle reveal" 
+           data-id="Klik kartu untuk memperbesar dokumen sertifikat"
+           data-en="Click any certificate to expand into fullscreen preview">
+          Klik kartu untuk memperbesar dokumen sertifikat
+        </p>
+
+        <!-- Carousel Component -->
+        <div class="carousel-container" id="certCarousel">
+          <button class="carousel-btn prev-btn" id="prevCert" aria-label="Sertifikat sebelumnya" data-id="Sebelumnya" data-en="Previous">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track" id="certTrack">
+              <!-- Item 1 -->
+              <div class="cert-card" data-index="0" data-src="assets/sertifikat-amcc.png">
+                <div class="cert-img-wrap">
+                  <img src="assets/sertifikat-amcc.png" alt="Sertifikat Juara 1 AMCC 2021" loading="lazy">
+                  <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="cert-info">
+                  <h3 data-id="Juara 1 AMCC 2021" data-en="1st Place AMCC 2021">Juara 1 AMCC 2021</h3>
+                  <p data-id="Amikom Computer Club" data-en="Amikom Computer Club">Amikom Computer Club</p>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="cert-card" data-index="1" data-src="assets/sertifikat-database.png">
+                <div class="cert-img-wrap">
+                  <img src="assets/sertifikat-database.png" alt="Sertifikat Basis Data" loading="lazy">
+                  <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="cert-info">
+                  <h3 data-id="Sertifikat Basis Data" data-en="Database Certification">Sertifikat Basis Data</h3>
+                  <p data-id="Microsoft SQL Server &amp; Desain Relasional" data-en="Microsoft SQL Server &amp; Relational Design">Microsoft SQL Server &amp; Desain Relasional</p>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="cert-card" data-index="2" data-src="assets/sertifikat-hardware.png">
+                <div class="cert-img-wrap">
+                  <img src="assets/sertifikat-hardware.png" alt="Sertifikat Hardware &amp; Software" loading="lazy">
+                  <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="cert-info">
+                  <h3 data-id="Sertifikat Hardware &amp; Software" data-en="Hardware &amp; Software Certification">Sertifikat Hardware &amp; Software</h3>
+                  <p data-id="Sistem Komputer &amp; Perangkat Keras" data-en="Computer Systems &amp; Hardware Architecture">Sistem Komputer &amp; Perangkat Keras</p>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="cert-card" data-index="3" data-src="assets/sertifikat-mikrokontroler.png">
+                <div class="cert-img-wrap">
+                  <img src="assets/sertifikat-mikrokontroler.png" alt="Sertifikat Mikrokontroler &amp; IoT" loading="lazy">
+                  <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="cert-info">
+                  <h3 data-id="Sertifikat Mikrokontroler &amp; IoT" data-en="Microcontroller &amp; IoT Certification">Sertifikat Mikrokontroler &amp; IoT</h3>
+                  <p data-id="Sistem Tertanam &amp; Antarmuka Sensor" data-en="Embedded Systems &amp; Sensor Interfacing">Sistem Tertanam &amp; Antarmuka Sensor</p>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="cert-card" data-index="4" data-src="assets/surat-magang.png">
+                <div class="cert-img-wrap">
+                  <img src="assets/surat-magang.png" alt="Surat Keterangan Magang" loading="lazy">
+                  <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="cert-info">
+                  <h3 data-id="Surat Keterangan Magang" data-en="Internship Certificate">Surat Keterangan Magang</h3>
+                  <p data-id="Asisten Laboratorium Universitas Amikom Yogyakarta" data-en="Laboratory Assistant at Universitas Amikom Yogyakarta">Asisten Laboratorium Universitas Amikom Yogyakarta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-btn next-btn" id="nextCert" aria-label="Sertifikat selanjutnya" data-id="Selanjutnya" data-en="Next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="carousel-indicators" id="certDots"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal" data-id="KONTAK SAYA" data-en="GET IN TOUCH">KONTAK SAYA</h2>
+        <p class="section-subtitle"
+           data-id="Terbuka untuk peluang kerja sama, diskusi teknis IoT & Database, ataupun proyek kreatif."
+           data-en="Open for collaboration opportunities, IoT & Database technical talks, or creative projects.">
+          Terbuka untuk peluang kerja sama, diskusi teknis IoT & Database, ataupun proyek kreatif.
+        </p>
+
+        <div class="contact-grid">
+          <!-- GitHub -->
+          <a href="https://github.com/rahmat48" target="_blank" rel="noopener noreferrer" class="contact-card delay-1">
+            <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="contact-info">
+              <h3>GitHub</h3>
+              <p>github.com/rahmat48</p>
+            </div>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:rahmatdw48@gmail.com" class="contact-card delay-2">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-info">
+              <h3>Email</h3>
+              <p>rahmatdw48@gmail.com</p>
+            </div>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/6281214277964" target="_blank" rel="noopener noreferrer" class="contact-card delay-3">
+            <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="contact-info">
+              <h3>WhatsApp</h3>
+              <p>+62 812-1427-7964</p>
+            </div>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://instagram.com/rahmatdw48" target="_blank" rel="noopener noreferrer" class="contact-card delay-4">
+            <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+            <div class="contact-info">
+              <h3>Instagram</h3>
+              <p>@rahmatdw48</p>
+            </div>
+          </a>
+
+          <!-- Domisili -->
+          <div class="contact-card contact-card-static delay-5">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-info">
+              <h3 data-id="Domisili" data-en="Location">Domisili</h3>
+              <p>Klaten, Jawa Tengah, ID</p>
+            </div>
+          </div>
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@BS_REVIEW48" target="_blank" rel="noopener noreferrer" class="contact-card delay-6">
+            <div class="contact-icon"><i class="fa-brands fa-youtube"></i></div>
+            <div class="contact-info">
+              <h3>YouTube</h3>
+              <p>@BS_REVIEW48</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-copy">&copy; 2025 Rahmat Dwi Nurcahyo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Pratinjau Sertifikat">
+    <button id="lightboxClose" class="lightbox-close" aria-label="Tutup pratinjau">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Pratinjau Sertifikat">
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
